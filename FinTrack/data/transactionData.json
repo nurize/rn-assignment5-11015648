@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "title" : "Apple Store",
+    "description": "Entertainment",
+    "image": "apple.png",
+    "cost" : "-$5,99"
+  }, 
+  {
+    "id": "1",
+    "title" : "Apple Store",
+    "description": "Entertainment",
+    "image": "apple.png",
+    "cost" : "-$5,99"
+  },
+  {
+    "id": "1",
+    "title" : "Apple Store",
+    "description": "Entertainment",
+    "image": "apple.png",
+    "cost" : "-$5,99"
+  },
+  {
+    "id": "1",
+    "title" : "Apple Store",
+    "description": "Entertainment",
+    "image": "apple.png",
+    "cost" : "-$5,99"
+  }
+]
