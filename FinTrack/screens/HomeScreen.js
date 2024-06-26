@@ -16,7 +16,8 @@ const HomeScreen = () => {
   const themeContainerStyle = DarkMode ? styles.darkContainer : styles.lightContainer;
   const themeStatusStyle = DarkMode ? 'dark-content' : 'light-content';
   const themeSearch = DarkMode ? styles.darkThemeSearch : styles.lightThemeSearch;
-  
+  //const themeIcon = DarkMode ? styles.darkIcon;
+
   const Search = DarkMode ? require('../assets/searchIcon.png') : require('../assets/search.png');
   const send = DarkMode ? require('../assets/upArrow.png') : require('../assets/send.png');
   const receive = DarkMode ? require('../assets/downArrow.png') : require('../assets/recieve.png');
@@ -30,10 +31,24 @@ const HomeScreen = () => {
       <View style={styles.homeHeader}>
         <Image style={styles.Profile} source={Profile} />
         <View style={styles.headerText}>
-          <Text style={[styles.homeHeaderText, themeTextStyle]}>Welcome back,</Text>
-          <Text style={[styles.homeHeaderText2, themeTextStyle]}>Eric Atsu</Text>
+          <Text 
+            style={[
+              styles.homeHeaderText, 
+              themeTextStyle
+            ]}>
+              Welcome back,
+          </Text>
+          <Text style={[
+            styles.homeHeaderText2, 
+            themeTextStyle
+          ]}>
+            Eric Atsu
+          </Text>
         </View>
-        <Pressable style={[styles.searchBackground, themeSearch]}>
+        <Pressable style={[
+          styles.searchBackground, 
+          themeSearch
+        ]}>
           <Image style={styles.searchIcon} source={Search}/>
         </Pressable>
       </View>
@@ -68,7 +83,12 @@ const HomeScreen = () => {
       </View>
       <View style={styles.transactions}>
         <View style={styles.transactionsHeader}>
-          <Text style={[styles.transactionsHeaderText, themeTextStyle]}>Transaction</Text>
+          <Text style={[
+            styles.transactionsHeaderText, 
+            themeTextStyle
+            ]}>
+              Transaction
+          </Text>
           <Text style={styles.transactionsHeaderLink}>Sell All</Text>
         </View>
         <FlatList 
@@ -76,8 +96,8 @@ const HomeScreen = () => {
           keyExtractor={(item) => item.id.toString()}
           renderItem={({item}) => (
             <View style={styles.transaction}>
-              <View style={styles.transactionIcon}>
-                <Image source={getImage(item.id)} style={styles.transactionIconAct}/>
+              <View style={[styles.transactionIcon, themeSearch]}>
+                <Image source={getImage(item.id)} style={[styles.transactionIconAct]}/>
               </View>
               <View style={styles.transactionDetails}>
                 <Text style={[styles.transactionTitle, themeTextStyle]}>{item.title}</Text>

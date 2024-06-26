@@ -1,5 +1,5 @@
-import { React, useState, useEffect, useContext } from "react";
-import {View, Text, FlatList, Switch, Appearance, useColorScheme} from 'react-native';
+import { React, useState, useContext } from "react";
+import {View, Text, FlatList, Switch, Image } from 'react-native';
 import styles from "../styles";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { ThemeContext } from "../App";
@@ -7,9 +7,9 @@ import { StatusBar } from "expo-status-bar";
 
 
 const SettingsScreen = () => {
-  const settings = require('../data/settings.json');
   const {theme, setTheme} = useContext(ThemeContext);
   const [DarkMode, setDarkMode] = useState(theme === 'dark');
+  const settings = require('../data/settings.json');
 
   // useEffect(() => {
   //   if(DarkMode) {
@@ -23,6 +23,7 @@ const SettingsScreen = () => {
   const themeContainerStyle = DarkMode ? styles.darkSettings : styles.lightContainer;
   const themeStatusStyle = DarkMode ? 'dark-content' : 'light-content';
   const themeBorderStyle = DarkMode ? styles.darkBorder : styles.lightBorder;
+  const themeSettingsArrow = DarkMode ? require('../assets/greater-than.png') : require('../assets/forwardArrow.png');
   return (
     <View style={[styles.container, themeContainerStyle]}>
       <StatusBar barStyle={themeStatusStyle}/>
@@ -35,7 +36,7 @@ const SettingsScreen = () => {
         return (
           <View style={[styles.settingsOptions, themeBorderStyle]}>
             <Text style={[styles.settingsOption, themeTextStyle]}>{item.name}</Text>
-            <Ionicons name="arrow-forward" size={24}/>
+            <Image source={themeSettingsArrow}/>
           </View>
         )
       }}/>

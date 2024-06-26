@@ -53,11 +53,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   bankCard: {
-    height: 200,
-    width: 350,
+    flex: 1,
   },
   card: {
     width: 'auto',
+    height: 230,
+    borderRadius: 25, 
+    padding: 10,
   },
   status: {
     flexDirection: 'row',
@@ -188,6 +190,12 @@ const styles = StyleSheet.create({
   }, 
   darkSettings: {
     backgroundColor: '#28243c',
+  },
+  darkIcon: {
+    tintColor: '#FFFFFF'
+  },
+  lightIcon: {
+    tintColor: 'black'
   },
 });
 
