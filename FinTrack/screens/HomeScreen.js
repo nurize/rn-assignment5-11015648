@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {View, Text, Image, Pressable, FlatList, ScrollView} from 'react-native';
+import {View, Text, Image, Pressable, FlatList, ScrollView, Appearance, useColorScheme} from 'react-native';
 import styles from '../styles';
 import getImage from '../utils/ImageLoader';
 
@@ -16,6 +16,7 @@ const HomeScreen = () => {
   const spotify = require('../assets/spotify.png');
   const transfer = require('../assets/moneyTransfer.png');
   const transactions = require('../data/transactionData.json');
+
 
   return( 
     <View style={styles.container}>

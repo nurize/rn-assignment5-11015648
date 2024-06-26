@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
+import { DarkTheme, NavigationContainer } from '@react-navigation/native';
 //import { StatusBar } from 'expo-status-bar';
 import { Image } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
@@ -12,9 +12,6 @@ import Statistics from './screens/Statistics';
 const Tab = createBottomTabNavigator();
 
 export default function App() {
-  //const Home = require("./assets/home.png");
-  const Cards = require("./assets/myCards.png");
-  const StatisticsIcon = require('./assets/statictics.png');
   return (
     <NavigationContainer>
       <Tab.Navigator screenOptions={{

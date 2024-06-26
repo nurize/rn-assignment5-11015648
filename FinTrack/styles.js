@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   //For the Home screen
-  container: {
+  lightContainer: {
     flex: 1,
     backgroundColor: '#FFFFFF',
     flexDirection: 'column',
@@ -167,6 +167,18 @@ const styles = StyleSheet.create({
   themeText: {
     fontSize: 26,
     fontWeight: '500',
+  },
+  //Dark Mode
+  darkText: {
+    color: '#FFFFFF',
+  },
+  darkContainer: {
+    backgroundColor: '#181424',
+    flex: 1,
+    flexDirection: 'column',
+    paddingTop: 30,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
   },
 });
 
