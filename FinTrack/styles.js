@@ -1,11 +1,9 @@
-import React from "react";
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   //For the Home screen
-  lightContainer: {
+  container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
     flexDirection: 'column',
     paddingTop: 30,
     paddingHorizontal: 20,
@@ -35,19 +33,24 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   searchBackground: {
-    backgroundColor: '#F2F2F2',
     borderRadius: 50,
     borderWidth: 20,
     borderColor: 'transparent',
     justifyContent: 'center',
     alignItems: 'center',
   },
+  darkThemeSearch: {
+    backgroundColor: '#3C3956',
+  },
+  lightThemeSearch: {
+    backgroundColor: '#F2F2F2',
+    color: 'black',
+  },
   searchIcon: {
     alignSelf: 'center',
-    //backgroundColor: '#B3B3B3',
-    padding: 5,
     width: 30,
     height: 20,
+    flex: 1,
   },
   bankCard: {
     height: 200,
@@ -152,7 +155,12 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     paddingTop: 35,
     borderBottomWidth: 2,
+  },
+  lightBorder: {
     borderColor: '#F2F2F2',
+  },
+  darkBorder: {
+    borderColor: '#3C3956',
   },
   settingsOption: {
     fontSize: 22,
@@ -174,11 +182,12 @@ const styles = StyleSheet.create({
   },
   darkContainer: {
     backgroundColor: '#181424',
-    flex: 1,
-    flexDirection: 'column',
-    paddingTop: 30,
-    paddingHorizontal: 20,
-    paddingVertical: 10,
+  },
+  lightContainer: {
+    backgroundColor: 'white',
+  }, 
+  darkSettings: {
+    backgroundColor: '#28243c',
   },
 });
 
