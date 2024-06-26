@@ -3,28 +3,28 @@
     "id": "1",
     "title" : "Apple Store",
     "description": "Entertainment",
-    "image": "apple.png",
+    "image": "../assets/apple.png",
     "cost" : "-$5,99"
   }, 
   {
-    "id": "1",
-    "title" : "Apple Store",
-    "description": "Entertainment",
-    "image": "apple.png",
-    "cost" : "-$5,99"
+    "id": "2",
+    "title" : "Spotify",
+    "description": "Music",
+    "image": "../assets/spotify.png",
+    "cost" : "-$12,99"
   },
   {
-    "id": "1",
-    "title" : "Apple Store",
-    "description": "Entertainment",
-    "image": "apple.png",
-    "cost" : "-$5,99"
+    "id": "3",
+    "title" : "Money Transer",
+    "description": "Transaction",
+    "image": "../assets/moneyTransfer.png",
+    "cost" : "$300"
   },
   {
-    "id": "1",
-    "title" : "Apple Store",
-    "description": "Entertainment",
-    "image": "apple.png",
-    "cost" : "-$5,99"
+    "id": "4",
+    "title" : "Grocery",
+    "description": "Meals",
+    "image": "../assets/grocery.png",
+    "cost" : "-$88"
   }
 ]

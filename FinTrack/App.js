@@ -1,17 +1,18 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+//import { StatusBar } from 'expo-status-bar';
+import { Image } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import MyCards from './screens/Cards';
 import Statistics from './screens/Statistics';
 
+
 const Tab = createBottomTabNavigator();
 
 export default function App() {
-  const Home = require("./assets/home.png");
+  //const Home = require("./assets/home.png");
   const Cards = require("./assets/myCards.png");
   const StatisticsIcon = require('./assets/statictics.png');
   return (
@@ -32,39 +33,39 @@ export default function App() {
         component={HomeScreen} 
         options={{
           tabBarIcon: ({color}) => 
-          <Image source={Home}/>,
+          <Ionicons name='home' size={24} color={color}/>,
         }}/>
         <Tab.Screen 
         name='My Cards' 
         component={MyCards}
         options={{
           tabBarIcon: ({color}) => 
-            <Image source={Cards}/>
+            <Ionicons name='card' size={24} color={color}/>
         }}/>
         <Tab.Screen 
         name='Statistics' 
         component={Statistics}
         options={{
           tabBarIcon: ({color}) => 
-            <Image source={StatisticsIcon} />
+            <Ionicons name='pie-chart' size={24} color={color}/>
         }}/>
         <Tab.Screen 
         name='Settings' 
         component={SettingsScreen}
         options={{
           tabBarIcon: ({color}) => 
-          <Ionicons name='settings' size={20} color={color}/>,
+          <Ionicons name='settings' size={24} color={color}/>,
         }}/>
       </Tab.Navigator>
     </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+// });
